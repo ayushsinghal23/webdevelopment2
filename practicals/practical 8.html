@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 8</title>
+    <style>
+        *
+        {
+            padding: 0%;
+            margin: 0px;
+        }
+        html{
+            scroll-behavior: smooth;
+            font-size:10px;
+            box-sizing: border-box;
+        }
+ /* --------------------------------------------------------------------------------------------------------------------------------- */
+/* Formatting main container */
+
+
+        #container
+        {
+            /* margin-top: 70px; */
+            padding:0px 15px ;
+          /* border:2px solid black; */
+        }
+        #container::after
+        {
+            content: "";
+            display: block;
+            clear:both;
+        }
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* Creating navbar using ul, li , a:hover */
+
+        #navbar
+        {
+            margin-bottom: 0px;
+            position: fixed;
+            top:0;
+            width: 100%;
+        }
+
+
+
+
+        ul
+        {
+       list-style-type: none;
+       width:100%;
+       height: 70px;
+       background-color: black;
+       overflow: hidden;
+       text-align: center;
+       margin: 0;
+       padding: 0px;
+       top:0;
+        }
+
+
+
+        li
+        {
+           float:left;   
+          width:20%;
+          
+        }
+
+        li a
+         {
+            display:block;
+            box-sizing: border-box;
+            color:white;
+            text-decoration: none;
+            padding: 14px 18px;
+            font-size: 35px;
+        }
+
+        li a:hover
+        {
+            background-color: grey;
+            transition: 1s;
+        }
+ /*---------------------------------------------------------------------------------------------------------------------------------- */
+/* Creating Banner */
+
+
+ #header .header{
+    
+  /* border: 2px solid blue; */
+  background-image: url('/images/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+  background-size: 100% 100%;
+  position: top center;
+  object-fit: cover;
+ }
+ .header .for-span
+ {
+     width:fit-content;
+     height:fit-content;
+     /* border:8px solid black; */
+     position: relative;
+     top:200px;
+     left:50px;
+
+ }
+ .header .for-span p
+ {
+    font-size: 6rem;
+    color:transparent;
+    text-transform: capitalize;
+    letter-spacing: .4rem;
+    animation: text-revealing .5s ease forwards;
+    animation-delay: 1.5s;
+ }
+ .header .for-span span
+ {
+     position: absolute;
+     top:0;
+     left:0;
+   background-color:crimson;
+   width:0;
+   height:100%;
+   animation:text-reveal 1.5s ease;
+   animation-delay: 1s;
+ }
+@keyframes text-reveal{
+50%{
+    width:100%;
+    left:0;
+
+}
+100%
+{
+    width: 0%;
+    left:100%;
+}
+}
+@keyframes text-revealing{
+    100%
+    {
+        color:white;
+    }
+}
+ 
+/*---------------------------------------------------------------------------------------------------------------------------------- */
+/* Creating section 1 */
+#section1 .section1
+{
+    /* border:2px solid sienna; */
+    display:flex;
+    flex-direction: column;
+}
+.section1 .section1-title
+{
+    /* border:2px solid black; */
+    width:100%;
+    height:70%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.section1 .section1-title
+{
+     font-size:3rem;
+     font-weight:600;
+     letter-spacing: .4rem;
+}
+.section1 .team
+{
+    /* border:2px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .team div{
+    width:25%;
+    height:100%;
+    /* border:2px solid navy; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .team div img
+{
+    height:70%;
+    width:75%;
+    border-radius: 50%;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------- */
+/* Creating section 2 */
+#section2 .section2
+{
+    /* border:6px solid green; */
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#section2 .section2::after
+{
+content: "";
+clear: both;
+display: block;
+}
+
+.section2 .section2-title
+{
+    /* border:2px solid forestgreen; */
+    width: 100%;
+    height:fit-content;
+    text-align: center;
+}
+.section2-title h1{
+    font-size:4.5rem;
+    margin:70px 0px 30px;
+    letter-spacing: .3rem;
+}
+#section2 .section2 .navs{
+    height:600px;
+    width:100%;
+    display:flex;
+    /* border:2px solid red; */
+}
+#section2 .navs .leftnav
+{
+    width:50%;
+    height:100%;
+    background-color: crimson;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+    margin-left: 7px;
+    /* border:2px solid blue; */
+}
+#section2 .navs .leftnav .leftnav-title
+{
+    width:98%;
+    height:70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* border:6px solid darkblue; */
+}
+#section2 .navs .leftnav h1
+{
+    font-size:5rem;
+    letter-spacing: .3rem;
+    color:white;
+    text-transform: capitalize;
+}
+#section2 .navs .leftnav .leftnav-para
+{
+    width:98%;
+    height:500px;
+    /* border:6px solid rgb(3, 58, 10); */
+    overflow:hidden;
+}
+#section2 .navs .leftnav p
+{
+    font-size: 2rem;
+    font-weight: 500;
+    padding:0px 30px;
+    line-height: 4rem;
+    letter-spacing: .2rem;
+    text-align: justify;
+    color: white;
+}
+
+#section2 .section2 .navs .rightnav
+{
+    /* border:4px solid black; */
+  width: 48%;
+  height:600px;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction: column; */
+  background-color: firebrick;
+  /* align-items: center;
+  justify-content: center; */
+
+}
+.section2 .navs .rightnav .article
+{
+   height:195px;
+    width:98%;
+    /* border:1px solid darkorange; */
+   margin:3px 7px;
+}
+#section2 .section2  .article img
+{   
+   
+     margin:0 auto;
+    height:100%;
+    width:100%;
+    border-radius:10px;
+  
+   
+}
+/* ----------------------------------------------------------------------------------------------------------*/
+/* creating Section 3 */ 
+
+
+#section3 .section3
+{
+   display:flex;
+   flex-direction: column;
+   /* border:2px solid black; */
+}
+.section3 .section3-title
+{
+    width:100%;
+    height:fit-content;
+    /* border:2px solid darkgreen; */
+    text-align: center;
+  
+}
+.section3 .section3-title h1 
+{
+  margin:100px auto;
+  font-size:4rem;
+  letter-spacing: .3rem;
+}
+.section3  .images-container
+{
+   display:flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+  /* border:2px solid khaki; */
+  margin:50px 0px 0px;
+ width:100%;
+ height:50%;
+}
+.section3 .images-container div{
+    height:100%;
+    width:22%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* border:2px solid royalblue; */
+    margin:0px 1%;
+    background-color: lightcoral;
+    text-transform: capitalize;
+    border-radius:4px;
+}
+.section3 .images-container  p{
+    font-size: 4rem;
+    letter-spacing: .3rem;
+    color:darkslategrey
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* creating footer */
+
+#footer .footer
+{
+    height:fit-content;
+    /* border:2px solid indianred; */
+}
+#footer .footer-title
+{
+    width:100%;
+    height:120px;
+    text-align:center;
+    /* border:2px solid darkred; */
+}
+#footer .footer-title h1
+{
+    font-size:4rem;
+    letter-spacing: .4rem;
+    margin:25px 0px 50px;
+
+}
+.footer .all-contact
+{
+    background-color: maroon;
+    border-radius:10px;
+    height: 100px;
+    width:100%;    
+   
+}
+.footer .contact-details{
+    display:flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.footer .contact-details p{
+    color: white;
+    font-weight:300;
+    letter-spacing: .1rem;
+    font-size:2rem;
+    margin:20px 0px;
+}
+.footer .all-contact .last-link
+{
+    font-size:2rem;
+    text-align: center;
+
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+.common
+{
+    height:100vh;
+    width: 100%;
+    /* border:2px solid red; */
+}
+/*---------------------------------------------------------------------------------------------------- */
+.title{
+    font-size: 30px;
+    margin: 150px 0 110px;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* cards in section 3 */
+.div-font
+        {
+            background-color:cornsilk;
+            width: 22%;
+            height:450px;
+            padding: 15px;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 10px;
+            float: left;
+            margin: 20px;
+            background-color:white;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+        }
+        .please-ban-jao
+        {
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            border: 2px solid black ;
+        }
+        .div-font h2
+        {
+            color:black;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .div-font p
+        {
+            text-align: justify;
+            font-size: 20px;
+            width: auto;
+            height: 100px;
+            color:black;
+           
+        }
+        button
+        {
+            height: 50px;
+            width: 200px;
+            background-color: #E84A5F;
+            transition: background-color 1s;
+            color: white;
+            border-radius:5px;
+            border: 3px outset black;
+            margin:0 auto;
+            text-align:center;
+            font-size: large;
+        }
+
+
+        button:hover
+        {
+          background-color:#6a2c70;
+          color:ivory;
+        }
+        .div-button
+       {
+           text-align: center;
+       }
+        /* --------------------------------------------------------------------------- */
+    </style>
+</head>
+<body>
+   <!-- navbar -->
+    <section>
+  
+    <div id="navbar">
+        <ul>
+            <li><a href="#header">Home</li></a>
+            <li><a href="#section1" >Team</li></a>
+            <li><a href="#section2">About us</li></a>
+            <li><a href="#section3">Technologies</li></a>
+            <li><a href="#footer">Contact</li></a>
+        </ul>
+    </div>
+   </section>
+
+<!-- banner -->
+  
+    <section id="header">      
+    <div class="header common">
+            <div class="for-span">
+                <p>practical 8 <span></span> </p>
+            </div> 
+       </div>
+    </section>
+
+<div id="container">
+    <!-- Section 1 -->
+    <section id="section1">
+    <div class="section1 common">
+           <div class="section1-title">
+               <h1>TEAM MEMBERS</h1>
+            </div> 
+            <div class="team">
+                <div><img src="/images/team1.png" alt="member 1"></div>
+                <div><img src="/images/team2.png" alt="member 1"></div>
+                <div><img src="/images/team3.png" alt="member 1"></div>
+                <div><img src="/images/team4.png" alt="member 1"></div>
+            </div>
+    </div>
+
+    </section>
+     <!-- section 2 -->
+ <section id="section2">
+ <div class="section2 common"> 
+    <div class="section2-title">
+        <h1>ABOUT US</h1>
+    </div>
+    <div class="navs">
+        <div class="leftnav">
+            <div class="leftnav-title"><h1>About Projects</h1></div>
+          <div class="leftnav-para">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Nulla dicta quae quidem, saepe cum accusamus magni. 
+              Facere esse commodi iure officiis vel, tempora soluta.
+              Maiores repellat voluptate expedita, ut facere repellen
+              dus alias vel ducimus doloribus incidunt fugiat sit aspe
+              riores dolore dolores nisi laborum sunt nam illum harum 
+              qui nihil maxime.Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Facilis delectus repudiandae natus qui.
+              Voluptas animi esse magni explicabo, consequuntur commodi
+              corrupti sed nulla modi distinctio placeat numquam persp
+              iciatis accusamus omnis eligendi natus reiciendis, neces
+              sitatibus voluptate rerum accusantium?Id aspernatur corru
+              pti exercitationem nisi dolorum! Asperiores modi saepe do.
+              </p>
+            </div>
+        </div>
+        <div class="rightnav">
+              <div class="article"><img src="/images/Article1.png"/></div>
+              <div class="article"><img src="/images/article2.png"/></div>
+              <div class="article"><img src="/images/Article3.png"/></div>
+        </div>
+    </div>
+ </div>
+ </section>
+  <!-- section 3 -->
+    <section id="section3">
+    <div class="section3 common"> 
+        <div class="section3-title">
+            <h1>TECHNOLOGIES USED</h1>
+        </div>
+        <div style="display: flex;">
+    <div class="div-font">   
+            <img src="https://ayushsinghal23.github.io/webdevelopment2/images/html.png" class="please-ban-jao"/>
+            <h2>Introduction to HTML</h2>
+            <p>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages. </p>
+         <div class="div-button" ><a alt="HTML"
+            href="https://ayushsinghal23.github.io/webdevelopment2/practicals/practical 5 subpages/htmldescription.html" target="_blank">
+            <button ><strong>READ MORE</strong></button></a> </div>
+         </div>
+
+
+         <div class="div-font">    
+            <img src="https://ayushsinghal23.github.io/webdevelopment2/images/css.png" class="please-ban-jao"/>
+            <h2>Introduction to CSS</h2>
+            <p>CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website. </p>
+         <div class="div-button" ><a alt="HTML"
+            href="https://ayushsinghal23.github.io/webdevelopment2/practicals/practical 5 subpages/cssdescription.html" target="_blank">
+            <button ><strong>READ MORE</strong></button></a> </div>
+        </div>
+    
+        <div class="div-font">   
+            <img src="https://ayushsinghal23.github.io/webdevelopment2/images/Javascript.png" class="please-ban-jao"/>
+            <h2>Introduction to JavaScript</h2>
+            <p>JavaScript is a dynamic computer programming language and most commonly used as a part of web pages. </p>
+         <div class="div-button" ><a alt="HTML"
+            href="https://ayushsinghal23.github.io/webdevelopment2/practicals/practical 5 subpages/javascriptdescription.html" target="_blank">
+            <button ><strong>READ MORE</strong></button> </a></div>
+         </div>
+    
+    
+        <div class="div-font">   
+            <img src="https://ayushsinghal23.github.io/webdevelopment2/images/bootstrap.png" class="please-ban-jao"/>
+            <h2>Introduction to BootStrap</h2>
+            <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile front-end web development. </p>
+         <div class="div-button" ><a alt="HTML"
+            href="https://ayushsinghal23.github.io/webdevelopment2/practicals/practical 5 subpages/bootstrapdescription.html" target="_blank">
+            <button ><strong>READ MORE</strong></button></a> </div>
+         </div>
+         </div>
+         </div>
+    </div>
+    </section>
+    <section id="footer">
+    <div class="footer common">
+        <div class="footer-title">
+                <h1>CONTACT US</h1>
+            </div>
+    <div class="all-contact">  
+        <div class="contact-details">
+                <p>Website Template for Practical-8 &copy;
+                 <a href="#footer"> Ayush Singhal</a>
+                </p>
+          </div>
+          <div class="last-link">
+                   <a href="#">BACK TO TOP</a>
+          </div>
+    </div>   
+        
+
+              
+    </div>
+    </section>
+</div>
+</body>
+</html>

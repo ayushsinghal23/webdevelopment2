@@ -10,7 +10,11 @@
             padding: 0%;
             margin: 0px;
         }
-
+        html{
+            scroll-behavior: smooth;
+            font-size:10px;
+            box-sizing: border-box;
+        }
  /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* Formatting main container */
 
@@ -39,7 +43,7 @@
             border-radius:10px;
             color:white;
             width:100%;
-            height:90px;
+            height:12vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -108,25 +112,75 @@
     border-radius: 10px;
     background-color: hotpink;
     width: 100%;
-    height: 500px;
+    height: 86vh;
     font-size: 60px;
     font-weight: bold;
     color:ivory;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 2vh;
+    position:relative;
+   
  }
 
+ #banner .banner-img
+ {
+    background-image: url('/images/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+   background-size: 100% 100%;
+   background-repeat:no repeat;
+   object-fit: cover;
+   width:100%;
+   height:100%;
+   position:absolute;
+    position: top center;
+   /* z-index: -1; */
+ }
+ .banner-img p{
+     margin: 50px 50px;
+     display: inline-block;
+     text-transform: capitalize;
+     color:transparent;
+     position: relative;
+     animation:text-revealing .5s ease forwards;
+     animation-delay:2.5s;
+ }
+ .banner-img  .for-span p span
+ {
+     background-color:crimson ;
+     width:0%;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     animation:text-reveal 1s ease;
+     animation-delay: 2s;
+    
+ }
+
+@keyframes text-reveal{
+50%{
+    width:100%;
+    left:0;
+
+}
+100%
+{
+    width: 0%;
+    left:100%;
+}
+}
+@keyframes text-revealing{
+    100%
+    {
+        color:white;
+    }
+}
  
 /*---------------------------------------------------------------------------------------------------------------------------------- */
 /* Creating section 1 */
-
-
 h1
 {
-    font-weight:bolder ;
+    font-weight:50px;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -169,136 +223,168 @@ h1
 
 /*---------------------------------------------------------------------------------------------------------------------------------- */
 /* Creating section 2 */
-#section2
+#section2 .section2
 {
- height:800px;
- width:100%;
- /* border: 1px solid black; */
- display:flex;
- margin-bottom: 50px;
-
-}
-#section2::after
-{
-    content:"";
-    clear:both;
-    display:block;
-}
-#leftnav
-{
-    background-color: goldenrod;
-    width:50%;
-    display:flex;
-    float:left;
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-}
-#rightnav
-{
+    border:2px solid green;
     display:flex;
     flex-direction: column;
-    /* border:1px solid black; */
-    width:48%;
+    height:120vh;
+}
+
+.section2 .section2-title
+{
+    align-items: center;
+    justify-content: center;
+    border:2px solid forestgreen
+}
+.section2-title h1{
+    font-size:4.5rem;
+    margin:70px auto 30px;
+    letter-spacing: .3rem;
+}
+#section2 .navs{
     height:100%;
-    
-
+    width:100%;
 }
-
-#rightnav #article
+#section2 .navs .leftnav
 {
-  width: 100%;
-  height:32.5%;
-  display: flex;
-  flex-direction: column;
-  background-color: chocolate;
-  border: 1px solid black;
-  justify-content: center;
-  align-items: center;
-  color:white;
-  margin-bottom:10px;
-  border-radius:10px;
+    width:50%;
+    background-color: crimson;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+    margin-left: 7px;
+    border:2px solid blue;
 }
-
-
-#rightnav #lastarticle
+#section2 .navs .leftnav p
 {
-  width: 100%;
-  height:32.5%;
-  display: flex;
-  flex-direction: column;
-  background-color: chocolate;
-  border: 1px solid black;
-  justify-content: center;
-  align-items: center;
-  color:white;
-  border-radius:10px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+}
+#section2 .navs .rightnav
+{
+    width:50%;
+    height:100%;
+}
+#section2 .navs .rightnav .article
+{
+    width:98%;
+    height:32.5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid black;
+    margin:0 1% 2px;
+    border-radius: 10px;
+    background-color: darksalmon;
+}
+#section2 .navs .rightnav .article p{
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+}
+#section2 .navs
+{
+    display: flex;
+    flex-direction: row;
 }
 /* ----------------------------------------------------------------------------------------------------------*/
 /* creating Section 3 */ 
 
 
-#section3
+#section3 .section3
+{
+   display:flex;
+   flex-direction: column;
+   border:2px solid black;
+}
+.section3 .section3-title
 {
     width:100%;
-    margin:15px auto;
-    display: flex;
-    /* border: 1px solid black; */
-    flex-direction: row;
+    height:fit-content;
+    border:2px solid darkgreen;
+  
+}
+.section3 .section3-title h1 
+{
+  margin:100px auto;
+  font-size:4rem;
+  letter-spacing: .3rem;
+}
+.section3  .images-container
+{
+   display:flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+  border:2px solid khaki;
+  margin:50px 0px 0px;
+ width:100%;
+ height:50%;
+}
+.section3 .images-container div{
+    height:100%;
+    width:22%;
+    display:flex;
     align-items: center;
     justify-content: center;
-
+    border:2px solid royalblue;
+    margin:0px 1%;
+    background-color: lightcoral;
+    text-transform: capitalize;
+    border-radius:4px;
 }
-
-#section3::after
-{
-    content:"";
-    clear:both;
-    display:block;
+.section3 .images-container  p{
+    font-size: 4rem;
+    letter-spacing: .3rem;
+    color:darkslategrey
 }
-
-#section3 div
-{
-    width:250px;
-    height:400px;
-    background-color: rgb(243, 59, 172);
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    border:2px solid  crimson;
-}
-
 
 /* ------------------------------------------------------------------------------------------------ */
 /* creating footer */
 
-#footer
-        {
-            background-color:lightskyblue;
-            border-radius:10px;
-            color:white;
-            width:100%;
-            height:90px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            font-weight:bold;
-        }
+#footer .footer
+{
+    height:fit-content;
+    border:2px solid indianred;
+}
+.footer div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: fit-content;
+    background-color: maroon;
+    border-radius:10px;
+}
+.footer div p{
+    color: white;
+    font-weight:700;
+    letter-spacing: .1rem;
+    font-size:4rem;
+    margin:50px 0px;
+}
 
+/* -------------------------------------------------------------------------------------------------- */
+.common
+{
+    height:100vh;
+    width: 100%;
+    border:2px solid red;
+}
+/*---------------------------------------------------------------------------------------------------- */
+.title{
+    font-size: 30px;
+    margin: 150px 0 110px;
+}
 
     </style>
 </head>
 <body>
+    <!-- banner and front part -->
+    <section>
   
     <div id="navbar">
         <ul>
@@ -309,15 +395,27 @@ h1
             <li><a href="#footer">Footer</li></a>
         </ul>
     </div>
-   
+   </section>
 
 <div id="container">
-   
-    <a name="header"><div id="header">Header</div></a> 
-    <div id="banner">Banner</div>
-    <a name="section1"></a>
-    <div id="section1">
-        <h1>SECTION 1</h1>
+    <section>
+        
+    <div class="common">
+    <a name="header"><div id="header">Header</div> </a>
+    <div id="banner">
+        <div class="banner-img">
+            <div class="for-span"><p>practical 8 <span></span>  </p></div> </div>
+       
+    </div>
+     </div>
+    </section>
+
+
+    <!-- Section 1 -->
+    <section >
+    <a name="section1">
+    <div id="section1" class="common">
+           <div class="title"><h1>SECTION 1</h1></div> 
             <div id="team">
                 <div id="image1">Image 1</div>
                 <div id="image2">Image 2</div>
@@ -325,28 +423,40 @@ h1
                 <div id="image4">Image 4</div>
             </div>
     </div>
-
-
-    <a name="section2"></a>
-    <h1>SECTION 2</h1>
-    <div id="section2">
-       <div id="leftnav">LEFTNAV</div>
-       <div id="rightnav">
-         <div id="article">ARTICLE 1</div>
-         <div id="article">ARTICLE 2</div>
-         <div id="lastarticle">ARTICLE 3</div>
-       </div>
+    </a>
+    </section>
+     <!-- section 2 -->
+  <section id="section2">
+      <div class="section2 common">
+          <div class="section2-title"><h1>SECTION 2</h1></div>
+          <div class="navs">
+        <div class="leftnav"><p>LEFTNAV</p></div>
+          <div class="rightnav">
+              <div class="article"><p>ARTICLE1</p></div>
+              <div class="article"><p>ARTICLE2</p></div>
+              <div class="article"><p>ARTICLE3</p></div>
+          </div>
+          </div>
+      </div>
+  </section>
+  <!-- section 3 -->
+    <section id="section3">
+    <div class="section3 common"> 
+        <div class="section3-title">
+            <h1>SECTION 3</h1>
+        </div>
+   <div class="images-container">
+        <div><p>image 1</p></div>
+        <div><p>image 2</p></div>
+        <div><p>image 3</p></div>
+        <div><p>image 4</p></div>
     </div>
-    <a name="section3"></a>
-    <h1>SECTION 3</h1>
-    <div id="section3">
-        <div id="image1">image1</div>
-        <div id="image2">image2</div>
-        <div id="image3">image3</div>
-        <div id="image4">image4</div>
-    </div> 
-    <a name="section3"></a> 
-    <div id="footer">footer</div>
-</div>
+   </div>
+    </section>
+    <section id="footer">
+        <div class="footer common">
+            <div><p>footer</p></div>
+        </div>
+    </section>
 </body>
 </html>
