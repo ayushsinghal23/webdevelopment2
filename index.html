@@ -1,363 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Home Page</title>
     <style>
-        body{
-            background:linear-gradient(-45deg,#EE7752,#E73C7E,#23A6D5,#23D5AB);
-        animation:background-animation 10s ease-in-out infinite;
-        background-size:400% 400%;
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        animation: background-animation 10s ease-in-out infinite;
+        background-size: 400% 400%;
+      }
+      caption {
+        font-size: 40px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 0.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          to right,
+          rgb(17, 18, 31),
+          rgb(84, 83, 102)
+        );
+        padding: 25px;
+        border-radius: 10px 10px 0px 0px;
+        border: 2px solid black;
+        border-width: 2px 2px 0px;
+      }
+
+      tr,
+      th {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid black;
+        font-size: 20px;
+        padding: 10px;
+      }
+      td {
+        padding: 15px 25px;
+        text-align: center;
+      }
+      .center {
+        width: 1200px;
+        margin: 0 auto;
+        border-radius: 0px 0px 10px 10px;
+        border-collapse: separate;
+        border-spacing: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid black;
+        border-width: 0px 2px 2px;
+        font-size: 20px;
+      }
+
+      th {
+        padding: 25px;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        color: white;
+        font-weight: 700;
+        border: 0px;
+        text-align: center;
+      }
+
+      th:nth-child(2) {
+        text-align: left;
+      }
+
+      th {
+        background-color: rgb(255, 60, 119);
+        animation: bhaukali-td-header 10s ease;
+        color: rgb(255, 255, 255);
+      }
+
+      tr:nth-child(even) {
+        background: rgb(216, 114, 156);
+        animation: bhaukali-td-even 10s ease;
+        color: rgb(255, 255, 255);
+      }
+      tr:nth-child(even):hover {
+        background: rgb(255, 142, 189);
+      }
+      tr:nth-child(odd) {
+        animation: bhaukali-td-odd 10s ease !important;
+        background-color: rgb(245, 53, 133);
+        color: rgb(255, 255, 255);
+      }
+      tr:nth-child(odd):hover {
+        background-color: rgb(253, 81, 152);
+      }
+
+      td:nth-child(2) {
+        max-width: 500px;
+        text-align: left;
+      }
+      td:nth-child(4) {
+        color: rgb(102, 255, 102);
+        font-weight: 800;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgb(39, 35, 80);
+      }
+      i:hover {
+        color: white;
+      }
+      .gh {
+        width: 100%;
+        background-color: red;
+        position: absolute !important;
+      }
+      a:nth-child(1) i {
+        margin-right: 10px;
+      }
+      @keyframes bhaukali-td-even {
+        0% {
+          width: 0;
+          left: 0%;
+          background-color: rgb(0, 121, 177);
+          /* color:rgb(0,0,0); */
         }
-       caption{
-            font-size:40px;
-            color:white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            letter-spacing: 0.2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            background-image:linear-gradient(to right,rgb(17, 18, 31),rgb(84, 83, 102));
-            padding:25px;
-             border-radius:10px 10px 0px 0px;
-             border:2px solid black;
-             border-width: 2px 2px 0px;
+        50% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(241, 56, 71);
+          /* color:rgb(61, 58, 58); */
         }
-      
-       
-        tr,th{
-            font-family: Arial, Helvetica, sans-serif;
-            border:2px solid black;
-            font-size:20px;
-            padding:10px;
-           
+        100% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(216, 114, 156);
+          /* color:rgb(255, 255, 255); */
         }
-        td{
-           padding:15px 25px;
-           text-align: center;
-           }
-        .center{
-            width:1200px;
-           margin:0 auto;
-           border-radius:0px 0px 10px 10px ;
-            border-collapse: separate;
-            border-spacing: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            border:2px solid black;
-            border-width: 0px 2px 2px;
-            font-size:20px;
+      }
+      @keyframes bhaukali-td-odd {
+        0% {
+          width: 0;
+          left: 0%;
+          background-color: rgb(0, 121, 177);
+          /* color:rgb(0,0,0); */
         }
-      
-      th{
-            padding:25px;
-            font-size: 30px;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            color:white;
-            font-weight: 700;
-            border:0px;
-            text-align:center;
+        50% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(241, 56, 71);
+        }
+        100% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(245, 53, 133);
+          /* color:rgb(255, 255, 255); */
+        }
+      }
+      @keyframes bhaukali-td-header {
+        0% {
+          width: 0;
+          left: 0%;
+          background-color: rgb(0, 121, 177);
+          /* color:rgb(0,0,0); */
+        }
+        50% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(241, 56, 71);
+          /* color:rgb(61, 58, 58); */
+        }
+        100% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(255, 60, 119);
+          /* color:rgb(255, 255, 255); */
+        }
+      }
+      @keyframes background {
+        0% {
+          width: 0;
+          left: 100%;
+          background-image: linear-gradient(
+            to right,
+            rgb(104, 87, 182),
+            rgb(255, 122, 195)
+          );
+          /* color:rgb(0,0,0); */
+        }
+        50% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(241, 56, 71);
+          /* color:rgb(61, 58, 58); */
+        }
+        100% {
+          width: 0%;
+          left: 100%;
+          background-color: rgb(255, 60, 119);
+          /* color:rgb(255, 255, 255); */
+        }
+      }
+      @keyframes background-animation {
+        0% {
+          background-position: 0% 50%;
         }
 
-        th:nth-child(2){
-            text-align:left ;
+        50% {
+          background-position: 100% 50%;
         }
-
-        th
-        {
-            background-color:rgb(255, 60, 119)  ;
-            animation: bhaukali-td-header 10s ease ;
-            color:rgb(255,255,255);
-            
+        100% {
+          background-position: 50% 0%;
         }
-
-        tr:nth-child(even)
-        {
-            background:rgb(216, 114, 156)  ;
-            animation: bhaukali-td-even 10s ease ;
-            color:rgb(255,255,255) ;
-        }
-        tr:nth-child(even):hover{
-            background:rgb(255, 142, 189)  ;
-        }
-        tr:nth-child(odd)
-        {
-            animation: bhaukali-td-odd 10s ease !important;
-            background-color: rgb(245, 53, 133) ;
-            color:rgb(255,255,255) ;
-        }
-        tr:nth-child(odd):hover{
-            background-color: rgb(253, 81, 152)  ;
-        }
-
-        td:nth-child(2){
-            max-width:500px;
-            text-align: left;
-        }
-        td:nth-child(4){
-            color:rgb(102, 255, 102);
-            font-weight: 800;
-        }
-
-        a{
-            text-decoration:none;
-            font-weight:700;
-            text-transform: uppercase;
-            color:rgb(39, 35, 80);
-
-        }
-        i:hover{
-            color:white;
-        }
-        .gh{
-            width: 100%;
-            background-color: red;
-            position: absolute !important;
-        }
-        a:nth-child(1) i{
-            margin-right: 10px;
-        }
-        @keyframes bhaukali-td-even {
-            0%{
-                width:0;
-                left:0%;
-                background-color: rgb(0, 121, 177);
-                /* color:rgb(0,0,0); */
-            }
-            50%{
-                width:0%;
-                left:100%;
-                background-color: rgb(241, 56, 71);
-                /* color:rgb(61, 58, 58); */
-            }
-            100%{
-                width:0%;
-                left:100%;
-                background-color: rgb(216, 114, 156);
-                /* color:rgb(255, 255, 255); */
-            }
-            
-        }
-        @keyframes bhaukali-td-odd {
-            0%{
-                width:0;
-                left:0%;
-                background-color: rgb(0, 121, 177);
-                /* color:rgb(0,0,0); */
-            }
-            50%{
-                width:0%;
-                left:100%;
-                background-color: rgb(241, 56, 71);
-            }
-            100%{
-                width:0%;
-                left:100%;
-                background-color: rgb(245, 53, 133);
-                /* color:rgb(255, 255, 255); */
-            }
-            
-        }
-        @keyframes bhaukali-td-header {
-            0%{
-                width:0;
-                left:0%;
-                background-color: rgb(0, 121, 177);
-                /* color:rgb(0,0,0); */
-            }
-            50%{
-                width:0%;
-                left:100%;
-                background-color: rgb(241, 56, 71);
-                /* color:rgb(61, 58, 58); */
-            }
-            100%{
-                width:0%;
-                left:100%;
-                background-color:rgb(255, 60, 119) ;
-                /* color:rgb(255, 255, 255); */
-            }
-        }
-        @keyframes background{
-            0%{
-                width:0;
-                left:100%;
-                background-image: linear-gradient(to right, rgb(104, 87, 182),rgb(255, 122, 195));
-                /* color:rgb(0,0,0); */
-            }
-            50%{
-                width:0%;
-                left:100%;
-                background-color: rgb(241, 56, 71);
-                /* color:rgb(61, 58, 58); */
-            }
-            100%{
-                width:0%;
-                left:100%;
-                background-color:rgb(255, 60, 119) ;
-                /* color:rgb(255, 255, 255); */
-            }
-            
-        }
-        @keyframes background-animation {
-        0%{   
-            background-position: 0% 50%;
-
-        }
-       
-        50%{
-            background-position:100% 50%;
-        }
-        100%{
-            background-position:50% 0%;
-        }
-    }
-      
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <table class="center">
-        <caption>Full Stack Live Practical Book</caption>
-        <thead>
-            <tr>
-            <th>#</th>
-            <th>Practical Name</th>
-            <th>Link</th>
-            <th>Status</th>
-            <th>Tools</th>
-            </tr>
-        </thead>
-<tbody>
-       <tr>
-        <td>1</td>
-        <td>Create a Web age including HTML basic skeleton
-            using Offline HTML Editor  and Online Sandbox Environment.</td>
-        <td><a href="practicals/practical 1.html"
-             target="_blank" title="GO TO PRACTICAL 1">PRACTICAL 1</a></td>
-        <td>Checked</td>
-        <td>
+      <caption>
+        Full Stack Live Practical Book
+      </caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Practical Name</th>
+          <th>Link</th>
+          <th>Status</th>
+          <th>Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            Create a Web age including HTML basic skeleton using Offline HTML
+            Editor and Online Sandbox Environment.
+          </td>
+          <td>
+            <a
+              href="practicals/practical 1.html"
+              target="_blank"
+              title="GO TO PRACTICAL 1"
+              >PRACTICAL 1</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Live your First Web-Page on Git-Hub.</td>
-        <td><a href="practicals/practical 2.html"
-             target="_blank" title="GO TO PRACTICAL 2">PRACTICAL 2</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Live your First Web-Page on Git-Hub.</td>
+          <td>
+            <a
+              href="practicals/practical 2.html"
+              target="_blank"
+              title="GO TO PRACTICAL 2"
+              >PRACTICAL 2</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Create a Web Page showing a basic HTML structure using Character Entities and span Tag.</td>
-        <td> <a href="practicals/practical 3.html"
-             target="_blank" title="GO TO PRACTICAL 3">PRACTICAL 3</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            Create a Web Page showing a basic HTML structure using Character
+            Entities and span Tag.
+          </td>
+          <td>
+            <a
+              href="practicals/practical 3.html"
+              target="_blank"
+              title="GO TO PRACTICAL 3"
+              >PRACTICAL 3</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Create a Website having list of all practicals and their individual practical page links .</td>
-        <td><a href="practicals/practical 4.html" target="_blank" title="GO TO PRACTICAL 4">PRACTICAL 4</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            Create a Website having list of all practicals and their individual
+            practical page links .
+          </td>
+          <td>
+            <a
+              href="practicals/practical 4.html"
+              target="_blank"
+              title="GO TO PRACTICAL 4"
+              >PRACTICAL 4</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Create a Website having list of all practicals and their individual practical page links .</td>
-        <td><a href="practicals/practical 5.html" target="_blank" title="GO TO PRACTICAL 5">PRACTICAL 5</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            Create a Website having list of all practicals and their individual
+            practical page links .
+          </td>
+          <td>
+            <a
+              href="practicals/practical 5.html"
+              target="_blank"
+              title="GO TO PRACTICAL 5"
+              >PRACTICAL 5</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>Create a card like layout using CSS layout properties.</td>
-        <td><a href="practicals/practical 6.html" target="_blank" title="GO TO PRACTICAL 6">PRACTICAL 6</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Create a card like layout using CSS layout properties.</td>
+          <td>
+            <a
+              href="practicals/practical 6.html"
+              target="_blank"
+              title="GO TO PRACTICAL 6"
+              >PRACTICAL 6</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Create a Web Page Layout using div tags.</td>
-        <td><a href="practicals/practical 7.html" target="_blank" title="GO TO PRACTICAL 7">PRACTICAL 7</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Create a Web Page Layout using div tags.</td>
+          <td>
+            <a
+              href="practicals/practical 7.html"
+              target="_blank"
+              title="GO TO PRACTICAL 7"
+              >PRACTICAL 7</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>Create a Web Page having Fixed Navigation Bar with the given content.</td>
-        <td><a href="practicals/practical 8.html" target="_blank" title="GO TO PRACTICAL 8">PRACTICAL 8</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            Create a Web Page having Fixed Navigation Bar with the given
+            content.
+          </td>
+          <td>
+            <a
+              href="practicals/practical 8.html"
+              target="_blank"
+              title="GO TO PRACTICAL 8"
+              >PRACTICAL 8</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-    <td>9</td>
-        <td>Create a Web Page having Fixed Navigation Bar with the given content.</td>
-        <td><a href="practicals/practical 9.html" target="_blank" title="GO TO PRACTICAL 9">PRACTICAL 9</a></td>
-        <td>Checked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            Create a Web Page having Fixed Navigation Bar with the given
+            content.
+          </td>
+          <td>
+            <a
+              href="practicals/practical 9.html"
+              target="_blank"
+              title="GO TO PRACTICAL 9"
+              >PRACTICAL 9</a
+            >
+          </td>
+          <td>Checked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>Create a Web Page having Fixed Navigation Bar with the given content.</td>
-        <td> <a href="practicals/practical 10.html" target="_blank" title="GO TO PRACTICAL 10">PRACTICAL 10</a></td>
-        <td style="color: rgb(156, 0, 0);">Unchecked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            Create a Web Page having Fixed Navigation Bar with the given
+            content.
+          </td>
+          <td>
+            <a
+              href="practicals/practical 10.html"
+              target="_blank"
+              title="GO TO PRACTICAL 10"
+              >PRACTICAL 10</a
+            >
+          </td>
+          <td style="color: rgb(156, 0, 0)">Unchecked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-      
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>Create a Table that represent Live Practical Book Records.</td>
-        <td> <a href="practicals/practical 11.html" target="_blank" title="GO TO PRACTICAL 11">PRACTICAL 11</a></td>
-        <td style="color: rgb(156, 0, 0);">Unchecked</td>
-        <td>
+          </td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Create a Table that represent Live Practical Book Records.</td>
+          <td>
+            <a
+              href="practicals/practical 11.html"
+              target="_blank"
+              title="GO TO PRACTICAL 11"
+              >PRACTICAL 11</a
+            >
+          </td>
+          <td style="color: rgb(156, 0, 0)">Unchecked</td>
+          <td>
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-      
-    </tr>
-    <tr>
-        <td style="border-bottom-left-radius:10px;">12</td>
-        <td>Create a Custom Price Table Template.</td>
-        <td><a href="practicals/practical 12.html" target="_blank" title="GO TO PRACTICAL 12">PRACTICAL 12</a></td>
-        <td style="color:rgb(156, 0, 0);">Unchecked</td>
-        <td style="border-bottom-right-radius:10px;">
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-left-radius: 10px">12</td>
+          <td>Create a Custom Price Table Template.</td>
+          <td>
+            <a
+              href="practicals/practical 12.html"
+              target="_blank"
+              title="GO TO PRACTICAL 12"
+              >PRACTICAL 12</a
+            >
+          </td>
+          <td style="color: rgb(156, 0, 0)">Unchecked</td>
+          <td style="border-bottom-right-radius: 10px">
             <a href="#" title="edit"> <i class="material-icons">edit</i></a>
             <a href="#" title="delete"><i class="material-icons">delete </i></a>
-         </td>
-    </tr>
-</tbody>
-</table>
-</body>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom-left-radius: 10px">13</td>
+          <td>Create a Responsive Footer Template.</td>
+          <td>
+            <a
+              href="practicals/practical 13.html"
+              target="_blank"
+              title="GO TO PRACTICAL 13"
+              >PRACTICAL 13</a
+            >
+          </td>
+          <td style="color: rgb(156, 0, 0)">Unchecked</td>
+          <td style="border-bottom-right-radius: 10px">
+            <a href="#" title="edit"> <i class="material-icons">edit</i></a>
+            <a href="#" title="delete"><i class="material-icons">delete </i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>

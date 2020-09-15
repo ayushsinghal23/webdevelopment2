@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      main header h1 {
+        font-size: 4rem;
+        display: inline-block;
+        margin: 20px;
+      }
+      main header h1:nth-child(1) {
+        color: blue;
+        margin-right: 25px;
+      }
+      main header h1:nth-child(2) {
+        color: rebeccapurple;
+      }
+      /*---------------- Footer Section------------------ */
+      footer {
+        max-width: 1450px;
+        min-height: 600px;
+        background-color: rgba(0, 0, 0, 0.794);
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+      }
+      footer .sec-1 {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-bottom: 3px solid rgb(70, 64, 64);
+      }
+      footer .sec-1 .heading {
+        margin-left: 10px;
+      }
+      footer .sec-1 .heading h2 {
+        margin-bottom: 20px;
+        color: white;
+        font-size: 2rem;
+      }
+      footer .sec-1 .about {
+        width: 30%;
+      }
+      footer .sec-1 .about p {
+        width: 100%;
+        font-size: 1.5rem;
+        height: fit-content;
+        /* border: 2px solid red; */
+        margin-bottom: 20px;
+        padding: 0% 5%;
+        text-align: justify;
+        color: rgb(192, 183, 183);
+      }
+
+      footer .sec-1 ul li {
+        list-style: none;
+        display: block;
+        font-size: 1.5rem;
+        color: rgb(192, 183, 183);
+      }
+      footer .sec-1 ul li:hover {
+        color: peachpuff;
+      }
+      footer .sec-1 .contact-us .list-item {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      footer .sec-1 .contact-us .list-item:hover i {
+        color: peachpuff;
+      }
+      footer .sec-1 .contact-us .list-item:hover p {
+        color: peachpuff;
+      }
+      footer .sec-1 .contact-us .list-item i {
+        font-size: 20px;
+        margin-right: 20px;
+        color: rgb(192, 183, 183);
+      }
+      footer .sec-1 .contact-us {
+        margin-right: 30px;
+      }
+      footer .sec-1 .contact-us .list-item p {
+        color: rgb(192, 183, 183);
+        text-align: left;
+        font-size: 1.5rem;
+      }
+      /* ----------------------------------------------  */
+      footer .sec-2 {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        border-bottom: 2px solid;
+        border-bottom: 3px solid rgb(70, 64, 64);
+      }
+
+      footer .sec-2 span {
+        font-size: 2.5rem;
+        color: rgb(192, 183, 183);
+        margin-right: 20px;
+      }
+      footer .sec-2 a {
+        background-color: red;
+        border-radius: 30px;
+        padding: 15px 40px;
+        font-size: 25px;
+        color: thistle;
+        outline: none;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      footer .sec-2 a:hover {
+        background-color: rgb(31, 7, 77);
+        font-weight: 600;
+        padding: 20px 60px;
+        border-radius: 40px;
+        font-size: 30px;
+      }
+      /* ------------------------------------------------------------------------------ */
+      footer .sec-3 {
+        padding: 20px;
+        height: fit-content;
+        border-bottom: 3px solid rgb(70, 64, 64);
+      }
+      .connections {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .connections i {
+        font-size: 50px;
+      }
+      .connections .icon {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        transition: all 0.5s ease;
+      }
+      .connections .icon:nth-child(1):hover {
+        background-color: #2a3d66;
+        color: white;
+      }
+      .connections .icon:nth-child(2):hover {
+        background-color: #a2d5f2;
+        color: white;
+      }
+      .connections .icon:nth-child(3):hover {
+        background-color: #197163;
+        color: white;
+      }
+      .connections .icon:nth-child(4):hover {
+        background-color: #318fb5;
+        color: white;
+      }
+      .connections .icon:nth-child(5):hover {
+        background-color: #be5683;
+        color: white;
+      }
+      /* ---------------------------------------------------------- */
+      footer .sec-4 {
+        background-color: black;
+        width: 100%;
+        padding: 40px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      footer .sec-4 p {
+        color: rgb(192, 183, 183);
+        font-size: 1.5rem;
+        position: relative;
+        transition: border-width 0.3s;
+      }
+      footer .sec-4 p::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 10%;
+
+        right: 0;
+        bottom: -10px;
+        position: absolute;
+        background-color: yellow;
+        transition: all 0.3s ease;
+      }
+      footer .sec-4 p:hover::after {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @media (min-width: 691px) and (max-width: 1042px) {
+        footer .sec-1 .about {
+          width: 100%;
+          text-align: center;
+        }
+        footer .sec-1 .about p {
+          width: 100%;
+          /* border: 2px solid yellow; */
+          padding-right: 5%;
+        }
+      }
+      @media (min-width: 0px) and (max-width: 691px) {
+        footer .sec-1 .about {
+          width: 100%;
+          text-align: center;
+        }
+        footer .sec-1 .about p {
+          padding-right: 5%;
+        }
+        footer .sec-1 {
+          flex-direction: column;
+        }
+        footer .sec-2 span {
+          font-size: 6vw;
+          color: rgb(192, 183, 183);
+          margin-right: 20px;
+        }
+        footer .sec-2 a {
+          padding: 10px 25px;
+          font-size: 20px;
+        }
+        footer .sec-2 a:hover {
+          padding: 15px 40px;
+          border-radius: 40px;
+          font-size: 23px;
+        }
+        .connections i {
+          font-size: 25px;
+        }
+        footer .sec-4 p {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+    <title>Practical 13</title>
+    <main>
+      <header>
+        <h1>Responsive</h1>
+        <h1>footer</h1>
+      </header>
+    </main>
+    <footer>
+      <section class="sec-1">
+        <div class="about heading">
+          <h2>About</h2>
+          <p>
+            Betalabs.in LET'S CODE TOGETHER is an intiative to help the upcoming
+            programmers with the code.Beta-Labs focues on providing the most
+            efficient code or snippets as the code wants to be simple. We will
+            help programmers build up concepts in different programming
+            languages that include C++, C, Java, HTML, CSS, Javascript, PHP,
+            SQL, Android etc.
+          </p>
+        </div>
+        <div class="catergories heading">
+          <h2>Catergories</h2>
+          <ul>
+            <li>C</li>
+            <li>UI Designing</li>
+            <li>PHP</li>
+            <li>Java</li>
+            <li>Android</li>
+            <li>Hybrid Apps</li>
+          </ul>
+        </div>
+        <div class="quick-links heading">
+          <h2>Quick-links</h2>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Contribute</li>
+            <li>Privacy Policy</li>
+            <li>Sitemap</li>
+            <li>Disclaimer</li>
+          </ul>
+        </div>
+        <div class="contact-us heading">
+          <h2>Contact-Us</h2>
+          <div class="list-item">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <p>XYZ,Chandigarh,India</p>
+          </div>
+          <div class="list-item">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <p>XYZ@gmail.com</p>
+          </div>
+          <div class="list-item">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <p>Mobile: +9098909876</p>
+          </div>
+          <div class="list-item">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <p>betalabs</p>
+          </div>
+        </div>
+      </section>
+      <section class="sec-2">
+        <span>Register for Free</span>
+        <a href="#">Sign Up</a>
+      </section>
+      <section class="sec-3">
+        <div class="connections">
+          <div class="icon"><i class="fa fa-facebook"></i></div>
+          <div class="icon"><i class="fa fa-twitter"></i></div>
+          <div class="icon"><i class="fa fa-google"></i></div>
+          <div class="icon"><i class="fa fa-linkedin"></i></div>
+          <div class="icon"><i class="fa fa-dribbble"></i></div>
+        </div>
+      </section>
+      <section class="sec-4">
+        <p>copyright&copy; All Rights Reserved by Beta-labs</p>
+      </section>
+    </footer>
+  </head>
+  <body></body>
+</html>
