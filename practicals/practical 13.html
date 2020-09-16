@@ -218,20 +218,34 @@
         position: relative;
         transition: border-width 0.3s;
       }
+      footer .sec-4 p::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        left: 50%;
+        bottom: -10px;
+        position: absolute;
+        background-color: yellow;
+        transition: all 0.5s ease;
+      }
       footer .sec-4 p::after {
         content: "";
         display: block;
         height: 2px;
-        width: 10%;
-
-        right: 0;
+        width: 0;
+        right: 50%;
         bottom: -10px;
         position: absolute;
         background-color: yellow;
         transition: all 0.3s ease;
       }
       footer .sec-4 p:hover::after {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
+      }
+      footer .sec-4 p:hover::before {
+        width: 50%;
         margin: 0 auto;
       }
       @media (min-width: 691px) and (max-width: 1042px) {
